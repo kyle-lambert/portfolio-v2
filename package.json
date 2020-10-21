@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/server.js",
+  "scripts": {
+    "dev": "parcel src/pages/index.html",
+    "build": "parcel build src/pages/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
+  }
+}

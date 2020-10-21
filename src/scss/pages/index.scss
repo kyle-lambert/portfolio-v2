@@ -1,0 +1,40 @@
+@use "../base/global";
+@use "../abstracts/variables" as *;
+@use "../components/navbar";
+
+.welcome {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: $cream;
+  height: 40vh;
+  overflow: hidden;
+  z-index: -1;
+
+  &-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-img {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: -10px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  background-color: $black;
+  margin-top: 40vh;
+}
