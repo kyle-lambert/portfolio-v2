@@ -2,3 +2,111 @@
 @use "../abstracts/variables" as *;
 
 @use "../components/navbar";
+@use '../components/button';
+
+.hero {
+  min-height: 80vh;
+  background-color: $cream;
+  padding: 80px 0;
+
+  &-container {
+    padding: 60px 0;
+    display: grid;
+    row-gap: 20px;
+
+    @media (min-width: $tablet) {
+      column-gap: 50px;
+      row-gap: 50px;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto auto;
+    }
+  }
+
+  &-heading {
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $tablet) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+    }
+  }
+
+  &-tech-list {
+    @media (min-width: $tablet) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    li {
+      position: relative;
+      line-height: 1.5;
+      font-weight: 700;
+      overflow: hidden;
+
+      @media (min-width: $tablet) {
+        text-align: right;
+      }
+    }
+  }
+
+  &-content {
+    @media (min-width: $tablet) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &-summary {
+    @media (min-width: $tablet) {
+      width: 90%;
+    }
+  }
+
+  &-button-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &-button-item {
+    margin: 8px 0;
+
+    @media (min-width: $tablet) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.detail {
+  min-height: 100vh;
+  background-color: $cream;
+
+  &-container {
+    margin-top: -50px;
+  }
+
+  &-img {
+    position: relative;
+    outline: 2px solid $black;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -19,8 +19,12 @@
   }
 
   &-brand {
-    display: flex;
-    align-items: center;
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &-nav {
@@ -42,13 +46,25 @@
   }
 
   &-list {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $tablet) {
+      width: unset;
+    }
   }
 
   &-item {
-    margin-left: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
+
+    @media (min-width: $tablet) {
+      margin-left: 35px;
+      margin-right: unset;
+    }
   }
 
   &-link {
