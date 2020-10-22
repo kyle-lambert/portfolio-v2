@@ -1,6 +1,8 @@
 @use "../base/global";
 @use "../abstracts/variables" as *;
+
 @use "../components/navbar";
+@use '../components/button';
 
 .welcome {
   position: fixed;
@@ -37,4 +39,52 @@
   min-height: 100vh;
   background-color: $black;
   margin-top: 40vh;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+
+  &-heading {
+    position: relative;
+    padding: 20px 0;
+    color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 70px;
+      background-color: $white;
+    }
+
+    &-line {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  // &-button-list {
+  //   margin-top: 60px;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   @media (min-width: $tablet) {
+  //     flex-direction: row;
+  //   }
+  // }
+
+  // &-button-item {
+  //   margin: 8px 0;
+
+  //   @media (min-width: $tablet) {
+  //     margin-right: 30px;
+  //   }
+  // }
+}
+
+.work {
+  background-color: $black;
+  padding: 60px 0;
 }

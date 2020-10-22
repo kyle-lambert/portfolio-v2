@@ -1,12 +1,24 @@
+@use '../abstracts/variables' as *;
+
 h1,
 h2,
 h3 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
   line-height: 1.5;
   color: inherit;
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 48px;
+
+  @media (min-width: $tablet) {
+    font-size: 64px;
+  }
+
+  @media (min-width: $laptop) {
+    font-size: 72px;
+  }
 }
 
 h2 {

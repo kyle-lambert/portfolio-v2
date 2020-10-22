@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  position: relative;
+  display: inline-block;
+  height: 55px;
+  min-width: 200px;
+  width: 100%;
+  padding: 0 20px;
+  order: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background-color: $cream;
+  font-size: 16px;
+  font-weight: 700;
+  color: $black;
+  border: 2px solid $cream;
+  transition: color 150ms ease-out, background-color 150ms ease-out;
+
+  &:hover {
+    background-color: $black;
+    color: $cream;
+  }
+}
