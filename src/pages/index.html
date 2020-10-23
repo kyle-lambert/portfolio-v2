@@ -9,33 +9,142 @@
   </head>
   <body>
     <header class="navbar">
-      <span class="navbar-block"></span>
-      <nav class="navbar-nav">
-        <div class="navbar-brand">
-          <a href="#" class="navbar-link"
-            >Kyle Lambert.<span class="line-span"></span>
-          </a>
+      <div class="container navbar__container">
+        <div class="line-wrap">
+          <a href="./index.html" class="navbar__link line">Kyle Lambert.</a>
         </div>
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a href="#" class="navbar-link"
-              >Home<span class="line-span"></span>
-            </a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="navbar-link"
-              >About<span class="line-span"></span>
-            </a>
-          </li>
-          <li class="navbar-item">
-            <a href="#" class="navbar-link"
-              >Contact<span class="line-span"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <div class="line-wrap">
+          <button class="navbar__btn line">Menu</button>
+        </div>
+      </div>
+      <span class="menu-overlay"></span>
+      <div class="menu">
+        <div class="menu__btn-wrap line-wrap">
+          <button class="menu__btn line">Close</button>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-list__item line-wrap">
+              <a href="#" class="nav-list__link line">Home</a>
+            </li>
+            <li class="nav-list__item line-wrap">
+              <a href="#projects" class="nav-list__link line">Projects</a>
+            </li>
+            <li class="nav-list__item line-wrap">
+              <a href="#" class="nav-list__link line">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
+      <section class="hero" id="hero">
+        <div class="hero__container container">
+          <h1 class="hero__heading">
+            <div class="line-wrap">
+              <span class="line">I'm Kyle,</span>
+            </div>
+            <div class="line-wrap">
+              <span class="line">Frontend Developer</span>
+            </div>
+            <div class="line-wrap">
+              <span class="line">based in Adelaide, Australia.</span>
+            </div>
+          </h1>
+        </div>
+      </section>
+      <section class="s1" id="projects">
+        <div class="s1__container container">
+          <h3 class="s1__heading">
+            <div class="line-wrap">
+              <span class="line">Featured Projects</span>
+            </div>
+          </h3>
+          <ul class="projects-list">
+            <li class="project-item">
+              <div class="content">
+                <h2 class="content__heading">
+                  <div class="line-wrap">
+                    <span class="line">MovieCloud</span>
+                  </div>
+                </h2>
+                <div class="content__sub-heading">
+                  June 2020, Web Development
+                </div>
+                <p class="content__copy">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati praesentium tempore, sapiente at perferendis nulla
+                  omnis ad incidunt commodi iusto rerum quod! Excepturi
+                  inventore sint minus quibusdam impedit nihil quidem? Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                  praesentium tempore, sapiente at perferendis nulla omnis ad
+                  incidunt commodi iusto rerum quod! Excepturi inventore sint
+                  minus quibusdam impedit nihil quidem?
+                </p>
+                <ul class="content__links">
+                  <li class="item">
+                    <a href="#" class="content__link btn"> Live Website </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="content__link btn">
+                      Github Repository
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="picture">
+                <span class="picture__overlay"></span>
+                <img
+                  src="../assets/moviecloud/movie-banner.png"
+                  alt="MovieCloud"
+                  class="picture__img"
+                />
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="content">
+                <h2 class="content__heading">
+                  <div class="line-wrap">
+                    <span class="line">Ghost Lifestyle</span>
+                  </div>
+                </h2>
+                <div class="content__sub-heading">
+                  October 2020, Web Development
+                </div>
+                <p class="content__copy">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati praesentium tempore, sapiente at perferendis nulla
+                  omnis ad incidunt commodi iusto rerum quod! Excepturi
+                  inventore sint minus quibusdam impedit nihil quidem? Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                  praesentium tempore, sapiente at perferendis nulla omnis ad
+                  incidunt commodi iusto rerum quod! Excepturi inventore sint
+                  minus quibusdam impedit nihil quidem?
+                </p>
+                <ul class="content__links">
+                  <li class="item">
+                    <a href="#" class="content__link btn">Live Website</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="content__link btn">Github Repository</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="picture">
+                <span class="picture__overlay"></span>
+                <img
+                  src="../assets/moviecloud/movie-banner.png"
+                  alt="MovieCloud"
+                  class="picture__img"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- <main>
       <section class="welcome">
         <div class="welcome-container container">
           <img src="../assets/welcome.svg" alt="Welcome" class="welcome-img" />
@@ -66,6 +175,6 @@
       <section class="work">
         <div class="work-container container"></div>
       </section>
-    </main>
+    </main> -->
   </body>
 </html>

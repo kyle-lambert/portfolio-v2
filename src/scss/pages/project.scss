@@ -94,7 +94,8 @@
 
 .detail {
   min-height: 100vh;
-  background-color: $cream;
+  // background-color: $cream;
+  padding-bottom: 60px;
 
   &-container {
     margin-top: -50px;
@@ -108,5 +109,13 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+  }
+
+  &-content {
+    padding: 5%;
+    color: $white;
+  }
+
+  &-list {
   }
 }
