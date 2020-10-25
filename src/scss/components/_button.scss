@@ -2,13 +2,13 @@
 
 .btn {
   height: 50px;
-  min-width: 200px;
+  min-width: 250px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid $white;
-  background-color: $dark-grey;
+  background-color: transparent;
   transition: color 150ms ease-out, background-color 150ms ease-out;
 
   &:hover {
