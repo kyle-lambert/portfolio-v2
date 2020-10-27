@@ -2,20 +2,17 @@
 @use "../abstracts/variables" as *;
 
 @use "../components/navbar";
+@use "../components/nav";
 @use "../components/button";
 
 .hero {
   min-height: 100vh;
-  background-color: $black;
+  padding: 60px 0;
   display: flex;
   align-items: center;
 }
 
-// Featured projects
 .s1 {
-  min-height: 100vh;
-  background-color: $dark-grey;
-
   &__container {
     padding: 60px 0;
   }
@@ -33,15 +30,16 @@
     padding: 20px 0;
     margin-bottom: 40px;
     min-height: 450px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: $laptop) {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 30px;
+      flex-direction: row;
     }
   }
 
   .content {
+    flex: 1;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -55,7 +53,8 @@
     }
 
     &__sub-heading {
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      font-size: inherit;
     }
 
     &__copy {
@@ -69,29 +68,22 @@
     &__links {
       margin-top: auto;
       display: flex;
-      flex-direction: column;
-
-      @media (min-width: $tablet) {
-        flex-direction: row;
-      }
+      flex-wrap: wrap;
 
       .item {
-        margin: 10px 0;
-
-        @media (min-width: $tablet) {
-          margin-right: 20px;
-          flex: 1;
-        }
+        margin: 5px 10px 5px 0;
       }
     }
   }
 
   .picture {
+    flex: 1;
+    flex-shrink: 0;
     position: relative;
     overflow: hidden;
 
     @media (min-width: $laptop) {
-      clip-path: polygon(30px 0, 100% 0, 100% 100%, 0% 100%);
+      margin-left: 20px;
     }
 
     &__overlay {
@@ -103,6 +95,8 @@
       left: 0;
       background-color: $accent;
       transform: translateX(-50%);
+
+      display: none;
     }
 
     &__img {
@@ -112,88 +106,3 @@
     }
   }
 }
-
-// .welcome {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   width: 100%;
-//   background-color: $cream;
-//   height: 40vh;
-//   overflow: hidden;
-//   z-index: -1;
-
-//   &-container {
-//     position: absolute;
-//     bottom: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//   }
-
-//   &-img {
-//     display: inline-block;
-//     height: auto;
-//     width: 100%;
-//     max-width: 800px;
-//     margin-bottom: -10px;
-
-//     @media (min-width: $tablet) {
-//       margin-bottom: -20px;
-//     }
-//   }
-// }
-
-// .hero {
-//   min-height: 100vh;
-//   background-color: $black;
-//   margin-top: 40vh;
-//   padding: 60px 0;
-//   display: flex;
-//   align-items: center;
-
-//   &-heading {
-//     position: relative;
-//     padding: 20px 0;
-//     color: $white;
-
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       height: 2px;
-//       width: 70px;
-//       background-color: $white;
-//     }
-
-//     &-line {
-//       position: relative;
-//       display: block;
-//       overflow: hidden;
-//     }
-//   }
-
-//   // &-button-list {
-//   //   margin-top: 60px;
-//   //   display: flex;
-//   //   flex-direction: column;
-
-//   //   @media (min-width: $tablet) {
-//   //     flex-direction: row;
-//   //   }
-//   // }
-
-//   // &-button-item {
-//   //   margin: 8px 0;
-
-//   //   @media (min-width: $tablet) {
-//   //     margin-right: 30px;
-//   //   }
-//   // }
-// }
-
-// .work {
-//   background-color: $black;
-//   padding: 60px 0;
-// }
