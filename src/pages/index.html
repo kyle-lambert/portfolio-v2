@@ -12,29 +12,36 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="container navbar__container">
-        <div class="line-wrap">
-          <a href="./index.html" class="navbar__logo line">Kyle Lambert.</a>
-        </div>
-        <div class="line-wrap">
-          <button class="navbar__btn line" data-nav-open>Menu</button>
-        </div>
+      <div class="navbar__container container">
+        <span class="navbar__line"></span>
+        <button class="navbar__btn line-wrap" data-nav-open>
+          <span class="line">Menu</span>
+        </button>
       </div>
     </header>
     <div class="nav" data-nav>
       <span class="nav__overlay" data-nav-overlay></span>
       <div class="nav__sidebar" data-nav-sidebar>
         <button class="nav__close" data-nav-close>Close</button>
-        <nav>
-          <ul class="nav__list">
+        <nav class="nav__nav">
+          <ul>
             <li class="nav__item">
-              <a href="#" class="nav__link" data-nav-link>Home</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Home</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link" data-nav-link>Projects</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Projects</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link" data-nav-link>Contact</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Contact</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
           </ul>
         </nav>
@@ -52,74 +59,74 @@
             </div>
             <div class="line-wrap">
               <span class="line" data-hero-line
-                >based in Adelaide, Australia.</span
+                >based in Adelaide, Australia</span
               >
             </div>
           </h1>
+          <div class="hero__links">
+            <a href="#" class="hero__link">Download Resume</a>
+            <a href="#" class="hero__link">Github Profile</a>
+            <a href="#" class="hero__link">LinkedIn Profile</a>
+          </div>
         </div>
       </section>
-      <section class="s1" id="projects">
-        <div class="s1__container container">
-          <h3 class="s1__heading">
-            <div class="line-wrap">
-              <span class="line">Featured Projects</span>
-            </div>
-          </h3>
-          <ul class="projects-list">
-            <li class="project-item" data-project-item>
-              <div class="content">
-                <h2 class="content__heading line-wrap">
-                  <span class="line" data-project-line>MovieCloud</span>
-                </h2>
-                <div class="content__sub-heading line-wrap">
-                  <span class="line" data-project-line>
-                    June 2020, Web Development</span
+      <section class="featured-projects" id="featuredProjects">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="line-wrap">
+              <span class="line">Screenshots</span>
+            </h2>
+            <span class="section-header-line"></span>
+          </header>
+          <ul class="featured-projects__list">
+            <li class="project-card" data-project-item>
+              <span class="project-card__overlay"></span>
+              <div class="project-card__content">
+                <h3 class="project-card__heading line-wrap" data-project-line>
+                  <span class="line">MovieCloud</span>
+                </h3>
+                <span class="project-card__subheading line-wrap">
+                  <span class="line">Web Development, June 2020</span>
+                </span>
+                <p class="project-card__copy" data-project-line>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati praesentium tempore, sapiente at perferendis nulla
+                  omnis ad incidunt commodi iusto rerum quod! Excepturi
+                  inventore sint minus quibusdam impedit nihil quidem? Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                  praesentium tempore, sapiente at perferendis nulla omnis ad
+                  incidunt commodi iusto rerum quod! Excepturi inventore sint
+                  minus quibusdam impedit nihil quidem?
+                </p>
+                <div class="project-card__links">
+                  <a href="#" class="project-card__link">View Website</a>
+                  <a href="#" class="project-card__link">Github Repository</a>
+                  <a href="./moviecloud.html" class="project-card__link"
+                    >More Information</a
                   >
                 </div>
-                <p class="content__copy">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati praesentium tempore, sapiente at perferendis nulla
-                  omnis ad incidunt commodi iusto rerum quod! Excepturi
-                  inventore sint minus quibusdam impedit nihil quidem? Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                  praesentium tempore, sapiente at perferendis nulla omnis ad
-                  incidunt commodi iusto rerum quod! Excepturi inventore sint
-                  minus quibusdam impedit nihil quidem?
-                </p>
-                <ul class="content__links">
-                  <li class="item">
-                    <a href="#" class="content__link btn"> Live Website </a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="content__link btn">
-                      Github Repository
-                    </a>
-                  </li>
-                </ul>
               </div>
-              <div class="picture">
-                <span
-                  class="picture__overlay"
-                  data-project-picture-overlay
-                ></span>
+              <div class="project-card__picture">
                 <img
                   src="../assets/moviecloud/banner.png"
-                  alt="MovieCloud"
-                  class="picture__img"
+                  alt="MovieCloud Banner"
+                  class="project-card__img"
                 />
+                <span class="project-card__number line-wrap">
+                  <span class="line">01.</span>
+                </span>
               </div>
             </li>
-            <li class="project-item" data-project-item>
-              <div class="content">
-                <h2 class="content__heading line-wrap">
-                  <span class="line" data-project-line>Ghost Lifestyle</span>
-                </h2>
-                <div class="content__sub-heading line-wrap">
-                  <span class="line" data-project-line>
-                    October 2020, Web Development
-                  </span>
-                </div>
-                <p class="content__copy">
+            <li class="project-card" data-project-item>
+              <span class="project-card__overlay"></span>
+              <div class="project-card__content">
+                <h3 class="project-card__heading line-wrap" data-project-line>
+                  <span class="line">Ghost Lifestyle</span>
+                </h3>
+                <span class="project-card__subheading line-wrap">
+                  <span class="line">Web Development, October 2020</span>
+                </span>
+                <p class="project-card__copy" data-project-line>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Obcaecati praesentium tempore, sapiente at perferendis nulla
                   omnis ad incidunt commodi iusto rerum quod! Excepturi
@@ -129,30 +136,43 @@
                   incidunt commodi iusto rerum quod! Excepturi inventore sint
                   minus quibusdam impedit nihil quidem?
                 </p>
-                <ul class="content__links">
-                  <li class="item">
-                    <a href="#" class="content__link btn">Live Website</a>
-                  </li>
-                  <li class="item">
-                    <a href="#" class="content__link btn">Github Repository</a>
-                  </li>
-                </ul>
+                <div class="project-card__links">
+                  <a href="#" class="project-card__link">View Website</a>
+                  <a href="#" class="project-card__link">Github Repository</a>
+                  <a href="#" class="project-card__link">More Information</a>
+                </div>
               </div>
-              <div class="picture">
-                <span
-                  class="picture__overlay"
-                  data-project-picture-overlay
-                ></span>
+              <div class="project-card__picture">
                 <img
                   src="../assets/ghost-lifestyle/banner.png"
-                  alt="Ghost Lifestyle"
-                  class="picture__img"
+                  alt="Ghost Lifestyle Banner"
+                  class="project-card__img"
                 />
+                <span class="project-card__number line-wrap">
+                  <span class="line">02.</span>
+                </span>
               </div>
             </li>
           </ul>
         </div>
       </section>
+      <section class="about-me" id="aboutMe">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="line-wrap">
+              <span class="line">About me</span>
+            </h2>
+            <span class="section-header-line"></span>
+          </header>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <span class="footer__text"
+          >Designed and built by Kyle Lambert. 2020</span
+        >
+      </div>
+    </footer>
   </body>
 </html>

@@ -4,102 +4,57 @@
 @use "../components/navbar";
 @use "../components/nav";
 @use "../components/button";
+@use "../components/project-card";
+@use "../components/footer";
+@use "../components/section-header";
 
+// *********** Home hero section ***********
 .hero {
   min-height: 100vh;
-  padding: 60px 0;
+  padding: 100px 0;
   display: flex;
   align-items: center;
-}
-
-.s1 {
-  &__container {
-    padding: 60px 0;
-  }
+  background-color: $dark-grey;
 
   &__heading {
-    border-bottom: 1px solid $white;
+    margin-bottom: 40px;
+  }
+
+  &__links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.75;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px 0;
+    margin-right: 15px;
+    color: $white;
+
+    &:hover {
+      color: $accent;
+    }
   }
 }
 
-.projects-list {
-  margin: 40px 0;
+// *********** Home featured projects section ***********
+.featured-projects {
+  padding: 100px 0;
+  background-color: $black;
 
-  .project-item {
-    border-bottom: 1px solid $white;
-    padding: 20px 0;
-    margin-bottom: 40px;
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: $laptop) {
-      flex-direction: row;
-    }
+  &__list {
+    margin: 40px 0;
   }
+}
 
-  .content {
-    flex: 1;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: $laptop) {
-      padding-bottom: unset;
-    }
-
-    &__heading {
-      margin-bottom: 10px;
-    }
-
-    &__sub-heading {
-      letter-spacing: 2px;
-      font-size: inherit;
-    }
-
-    &__copy {
-      margin: 20px 0 50px 0;
-
-      @media (min-width: $tablet) {
-        width: 90%;
-      }
-    }
-
-    &__links {
-      margin-top: auto;
-      display: flex;
-      flex-wrap: wrap;
-
-      .item {
-        margin: 5px 10px 5px 0;
-      }
-    }
-  }
-
-  .picture {
-    flex: 1;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-
-    @media (min-width: $laptop) {
-      margin-left: 20px;
-    }
-
-    &__overlay {
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $accent;
-    }
-
-    &__img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+// *********** Home about me section ***********
+.about-me {
+  padding: 100px 0;
+  background-color: $dark-grey;
 }

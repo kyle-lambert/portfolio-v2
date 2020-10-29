@@ -33,14 +33,23 @@
     width: 100%;
     background-color: $white;
     z-index: 299;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
   }
 
   &__close {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 40px;
+    right: 40px;
+
+    line-height: 1.75;
     color: $black;
-    padding: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 5px 0;
     transition: letter-spacing 150ms ease-out;
 
     &:hover {
@@ -48,27 +57,31 @@
     }
   }
 
-  &__list {
-    position: absolute;
-    top: 175px;
-    left: 15%;
+  &__nav {
+    width: 100%;
   }
 
   &__item {
-    padding: 0 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &-line {
+      height: 1px;
+      background-color: $black;
+      flex: 1;
+      margin-left: 15px;
+      // opacity: 0;
+    }
   }
 
   &__link {
     position: relative;
+    font-family: "LegalObligationSans";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
     color: $black;
-    font-size: 72px;
-    transition: letter-spacing 150ms ease;
-
-    &:hover {
-      -webkit-text-stroke-color: $black;
-      -webkit-text-stroke-width: 2px;
-      letter-spacing: 8px;
-      color: $white;
-    }
+    font-size: 96px;
   }
 }

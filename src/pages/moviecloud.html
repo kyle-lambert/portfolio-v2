@@ -12,29 +12,36 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="container navbar__container">
-        <div class="line-wrap">
-          <a href="./index.html" class="navbar__logo line">Kyle Lambert.</a>
-        </div>
-        <div class="line-wrap">
-          <button class="navbar__btn line" data-nav-open>Menu</button>
-        </div>
+      <div class="navbar__container container">
+        <span class="navbar__line"></span>
+        <button class="navbar__btn line-wrap" data-nav-open>
+          <span class="line">Menu</span>
+        </button>
       </div>
     </header>
     <div class="nav" data-nav>
       <span class="nav__overlay" data-nav-overlay></span>
       <div class="nav__sidebar" data-nav-sidebar>
         <button class="nav__close" data-nav-close>Close</button>
-        <nav>
-          <ul class="nav__list">
+        <nav class="nav__nav">
+          <ul>
             <li class="nav__item">
-              <a href="./index.html" class="nav__link" data-nav-link>Home</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Home</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link" data-nav-link>Projects</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Projects</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link" data-nav-link>Contact</a>
+              <div class="line-wrap">
+                <a href="#" class="nav__link" data-nav-link>Contact</a>
+              </div>
+              <span class="nav__item-line"></span>
             </li>
           </ul>
         </nav>
@@ -60,14 +67,11 @@
               rerum quod! Excepturi inventore sint minus quibusdam impedit nihil
               quidem?
             </p>
-            <ul class="hero__links">
-              <li class="item">
-                <a href="#" class="hero__link btn"> Live Website </a>
-              </li>
-              <li class="item">
-                <a href="#" class="hero__link btn"> Github Repository </a>
-              </li>
-            </ul>
+            <div class="hero__links">
+              <a href="#" class="hero__link">View Website</a>
+              <a href="#" class="hero__link">Github Repository</a>
+              <a href="#" class="hero__link">More Information</a>
+            </div>
           </div>
         </div>
         <div class="hero__picture">
@@ -79,14 +83,21 @@
           />
         </div>
       </section>
-      <section class="s1">
-        <div class="s1__container container">
-          <h2 class="s1__heading">General Informations</h2>
-          <div class="s1__boxes">
-            <div class="s1__box">
-              <span class="s1__box-overlay"></span>
-              <h3 class="s1__box-heading">Aim & Objective</h3>
-              <p class="s1__box-copy">
+      <section class="details">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="line-wrap">
+              <span class="line">Project Information</span>
+            </h2>
+            <span class="section-header-line"></span>
+          </header>
+          <div class="details__boxes">
+            <div class="details__box">
+              <span class="details__box-overlay"></span>
+              <h3 class="details__box-heading line-wrap">
+                <span class="line">01. Aim & Objective </span>
+              </h3>
+              <p class="details__box-copy">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
                 facere officia dignissimos molestiae consequuntur architecto at
                 praesentium rerum placeat minima numquam in natus, repellat
@@ -101,10 +112,12 @@
                 repellendus.
               </p>
             </div>
-            <div class="s1__box">
-              <span class="s1__box-overlay"></span>
-              <h3 class="s1__box-heading">Build Challenges</h3>
-              <p class="s1__box-copy">
+            <div class="details__box">
+              <span class="details__box-overlay"></span>
+              <h3 class="details__box-heading line-wrap">
+                <span class="line">02. Build Challenges </span>
+              </h3>
+              <p class="details__box-copy">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
                 facere officia dignissimos molestiae consequuntur architecto at
                 praesentium rerum placeat minima numquam in natus, repellat
@@ -117,19 +130,37 @@
                 recusandae, totam nihil saepe, veniam quam harum, architecto
                 odit fuga cumque facilis? Vero eos quasi voluptatum! Dolor,
                 repellendus.
+              </p>
+            </div>
+            <div class="details__box">
+              <span class="details__box-overlay"></span>
+              <h3 class="details__box-heading line-wrap">
+                <span class="line">03. Tools & Technology Stack </span>
+              </h3>
+              <p class="details__box-copy">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+                facere officia dignissimos molestiae consequuntur architecto at
+                praesentium rerum placeat minima numquam in natus, repellat
+                dolorem deserunt eveniet, velit odit! Quaerat. Odit, iure
+                doloremque! Magnam, ex quo earum et incidunt ab molestiae soluta
+                cupiditate corporis nam praesentium tenetur ut est commodi
+                dolorum.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="s2">
-        <div class="s2__container container">
+      <section class="screenshots">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="line-wrap">
+              <span class="line">Screenshots</span>
+            </h2>
+            <span class="section-header-line"></span>
+          </header>
+
           <img
             src="../assets/moviecloud/moviecloud-combo-mockup.png"
-            alt="MovieCloud Laptop and Phone"
-          />
-          <img
-            src="../assets/moviecloud/moviecloud-search-mockup.png"
             alt="MovieCloud Laptop and Phone"
           />
           <img
@@ -139,5 +170,12 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <span class="footer__text"
+          >Designed and built by Kyle Lambert. 2020</span
+        >
+      </div>
+    </footer>
   </body>
 </html>

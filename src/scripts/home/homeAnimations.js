@@ -1,36 +1,69 @@
 export function staggerReveal(nodes) {
   const tl = gsap.timeline({ paused: true });
   tl.from(nodes, {
-    delay: 0.2,
-    autoAlpha: 0,
+    delay: 0.5,
     yPercent: 100,
-    duration: 1.2,
-    stagger: 0.3,
-    ease: "expo.out",
+    duration: 1.5,
+    stagger: 0.15,
+    ease: "power3.out",
   });
 
   return tl;
 }
 
-export function projectTimeline(trigger) {
+export function overlayReveal(node) {
   const tl = gsap.timeline({
-    scrollTrigger: trigger,
-  });
-
-  tl.from("[data-project-line]", {
-    delay: 0.2,
-    autoAlpha: 0,
-    yPercent: 100,
-    duration: 0.6,
-    stagger: 0.2,
-    ease: "expo.out",
-  }).to(
-    "[data-project-picture-overlay]",
-    {
-      xPercent: 100,
-      duration: 0.6,
-      ease: "power4.in",
+    scrollTrigger: {
+      trigger: node,
+      markers: true,
     },
-    "-=1.2"
+  });
+  tl.to(node, {
+    xPercent: 100,
+    duration: 1.6,
+    ease: "power4.out",
+  });
+}
+
+export function projectReveal(current) {
+  const projectLines = Array.from(
+    current.querySelectorAll("[data-project-line]")
   );
+  const projectBtns = Array.from(
+    current.querySelectorAll("[data-project-btn]")
+  );
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: current,
+      markers: true,
+      start: "center bottom",
+    },
+  });
+  tl.from(current, {
+    autoAlpha: 0,
+    duration: 0.5,
+  }).from(
+    projectLines,
+    {
+      autoAlpha: 0,
+      xPercent: -100,
+      duration: 1,
+      stagger: 0.1,
+      scale: 2.4,
+      ease: "expo.out",
+    },
+    "<"
+  );
+  // .from(
+  //   projectBtns,
+  //   {
+  //     autoAlpha: 0,
+  //     xPercent: -100,
+  //     duration: 0.5,
+  //     stagger: 0.1,
+  //     ease: "expo.out",
+  //   },
+  //   "<"
+  // );
 }

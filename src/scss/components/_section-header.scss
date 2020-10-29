@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+.section-header {
+  display: flex;
+  align-items: center;
+
+  &-line {
+    flex: 1;
+    background-color: $white;
+    height: 1px;
+    margin-left: 15px;
+  }
+}
