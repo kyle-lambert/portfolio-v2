@@ -13,9 +13,9 @@
   <body>
     <header class="navbar">
       <div class="navbar__container container">
-        <span class="navbar__line"></span>
+        <span class="navbar__line" data-navbar-line></span>
         <button class="navbar__btn line-wrap" data-nav-open>
-          <span class="line">Menu</span>
+          <span class="line" data-navbar-btn-text>Menu</span>
         </button>
       </div>
     </header>
@@ -64,31 +64,38 @@
             </div>
           </h1>
           <div class="hero__links">
-            <a href="#" class="hero__link">Download Resume</a>
-            <a href="#" class="hero__link">Github Profile</a>
-            <a href="#" class="hero__link">LinkedIn Profile</a>
+            <a href="#" class="hero__link" data-hero-link>Download Resume</a>
+            <a href="#" class="hero__link" data-hero-link>Github Profile</a>
+            <a href="#" class="hero__link" data-hero-link>LinkedIn Profile</a>
           </div>
         </div>
       </section>
       <section class="featured-projects" id="featuredProjects">
         <div class="container">
-          <header class="section-header">
+          <header class="section-header" data-section-header>
             <h2 class="line-wrap">
-              <span class="line">Screenshots</span>
+              <span class="line" data-section-header-text
+                >Featured Projects</span
+              >
             </h2>
-            <span class="section-header-line"></span>
+            <span class="section-header-line" data-section-header-line></span>
           </header>
           <ul class="featured-projects__list">
-            <li class="project-card" data-project-item>
-              <span class="project-card__overlay"></span>
+            <li class="project-card" data-project-card>
+              <span
+                class="project-card__overlay"
+                data-project-card-overlay
+              ></span>
               <div class="project-card__content">
-                <h3 class="project-card__heading line-wrap" data-project-line>
-                  <span class="line">MovieCloud</span>
+                <h3 class="project-card__heading line-wrap">
+                  <span class="line" data-project-card-line>MovieCloud</span>
                 </h3>
                 <span class="project-card__subheading line-wrap">
-                  <span class="line">Web Development, June 2020</span>
+                  <span class="line" data-project-card-line
+                    >Web Development, June 2020</span
+                  >
                 </span>
-                <p class="project-card__copy" data-project-line>
+                <p class="project-card__copy" data-project-card-copy>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Obcaecati praesentium tempore, sapiente at perferendis nulla
                   omnis ad incidunt commodi iusto rerum quod! Excepturi
@@ -99,9 +106,16 @@
                   minus quibusdam impedit nihil quidem?
                 </p>
                 <div class="project-card__links">
-                  <a href="#" class="project-card__link">View Website</a>
-                  <a href="#" class="project-card__link">Github Repository</a>
-                  <a href="./moviecloud.html" class="project-card__link"
+                  <a href="#" class="project-card__link" data-project-card-link
+                    >View Website</a
+                  >
+                  <a href="#" class="project-card__link" data-project-card-link
+                    >Github Repository</a
+                  >
+                  <a
+                    href="./moviecloud.html"
+                    class="project-card__link"
+                    data-project-card-link
                     >More Information</a
                   >
                 </div>
@@ -113,20 +127,27 @@
                   class="project-card__img"
                 />
                 <span class="project-card__number line-wrap">
-                  <span class="line">01.</span>
+                  <span class="line" data-project-card-line>01.</span>
                 </span>
               </div>
             </li>
-            <li class="project-card" data-project-item>
-              <span class="project-card__overlay"></span>
+            <li class="project-card" data-project-card>
+              <span
+                class="project-card__overlay"
+                data-project-card-overlay
+              ></span>
               <div class="project-card__content">
-                <h3 class="project-card__heading line-wrap" data-project-line>
-                  <span class="line">Ghost Lifestyle</span>
+                <h3 class="project-card__heading line-wrap">
+                  <span class="line" data-project-card-line
+                    >Ghost Lifestyle</span
+                  >
                 </h3>
                 <span class="project-card__subheading line-wrap">
-                  <span class="line">Web Development, October 2020</span>
+                  <span class="line" data-project-card-line
+                    >Web Development, October 2020</span
+                  >
                 </span>
-                <p class="project-card__copy" data-project-line>
+                <p class="project-card__copy" data-project-card-copy>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Obcaecati praesentium tempore, sapiente at perferendis nulla
                   omnis ad incidunt commodi iusto rerum quod! Excepturi
@@ -137,9 +158,18 @@
                   minus quibusdam impedit nihil quidem?
                 </p>
                 <div class="project-card__links">
-                  <a href="#" class="project-card__link">View Website</a>
-                  <a href="#" class="project-card__link">Github Repository</a>
-                  <a href="#" class="project-card__link">More Information</a>
+                  <a href="#" class="project-card__link" data-project-card-link
+                    >View Website</a
+                  >
+                  <a href="#" class="project-card__link" data-project-card-link
+                    >Github Repository</a
+                  >
+                  <a
+                    href="./moviecloud.html"
+                    class="project-card__link"
+                    data-project-card-link
+                    >More Information</a
+                  >
                 </div>
               </div>
               <div class="project-card__picture">
@@ -149,7 +179,7 @@
                   class="project-card__img"
                 />
                 <span class="project-card__number line-wrap">
-                  <span class="line">02.</span>
+                  <span class="line" data-project-card-line>02.</span>
                 </span>
               </div>
             </li>
@@ -158,11 +188,11 @@
       </section>
       <section class="about-me" id="aboutMe">
         <div class="container">
-          <header class="section-header">
+          <header class="section-header" data-section-header>
             <h2 class="line-wrap">
-              <span class="line">About me</span>
+              <span class="line" data-section-header-text>About me</span>
             </h2>
-            <span class="section-header-line"></span>
+            <span class="section-header-line" data-section-header-line></span>
           </header>
         </div>
       </section>

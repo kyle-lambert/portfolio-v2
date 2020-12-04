@@ -1,69 +1,94 @@
-export function staggerReveal(nodes) {
-  const tl = gsap.timeline({ paused: true });
-  tl.from(nodes, {
-    delay: 0.5,
+export function heroAnimation() {
+  const tl = gsap.timeline();
+  tl.from("[data-hero-line]", {
     yPercent: 100,
-    duration: 1.5,
-    stagger: 0.15,
-    ease: "power3.out",
+    duration: 1.4,
+    stagger: 0.2,
+    ease: "power4.inOut",
   });
-
-  return tl;
+  tl.from(
+    "[data-hero-link]",
+    {
+      autoAlpha: 0,
+      duration: 1.4,
+      stagger: 0.2,
+      ease: "power4.in",
+    },
+    "<"
+  );
 }
 
-export function overlayReveal(node) {
+export function sectionHeadingAnimation(current) {
+  const text = current.querySelector("[data-section-header-text]");
+  const line = current.querySelector("[data-section-header-line]");
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: node,
-      markers: true,
+      trigger: current,
     },
   });
-  tl.to(node, {
-    xPercent: 100,
-    duration: 1.6,
-    ease: "power4.out",
+
+  tl.from(line, {
+    autoAlpha: 0,
+    scaleX: 0,
+    duration: 1.2,
+    ease: "power4.inOut",
   });
+  tl.from(
+    text,
+    {
+      yPercent: 100,
+      duration: 1.2,
+      ease: "power4.inOut",
+    },
+    "<1"
+  );
 }
 
-export function projectReveal(current) {
-  const projectLines = Array.from(
-    current.querySelectorAll("[data-project-line]")
+export function projectCardReveal(current) {
+  const overlay = current.querySelector("[data-project-card-overlay]");
+  const lines = Array.from(
+    current.querySelectorAll("[data-project-card-line]")
   );
-  const projectBtns = Array.from(
-    current.querySelectorAll("[data-project-btn]")
+  const copy = current.querySelector("[data-project-card-copy]");
+  const links = Array.from(
+    current.querySelectorAll("[data-project-card-link]")
   );
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: current,
-      markers: true,
-      start: "center bottom",
+    },
+    defaults: {
+      ease: "power4.inOut",
+      duration: 1.4,
     },
   });
-  tl.from(current, {
-    autoAlpha: 0,
-    duration: 0.5,
-  }).from(
-    projectLines,
+
+  tl.to(overlay, {
+    delay: 0.2,
+    xPercent: 100,
+  });
+  tl.from(
+    lines,
     {
-      autoAlpha: 0,
-      xPercent: -100,
-      duration: 1,
-      stagger: 0.1,
-      scale: 2.4,
-      ease: "expo.out",
+      yPercent: 100,
+      stagger: 0.2,
     },
     "<"
   );
-  // .from(
-  //   projectBtns,
-  //   {
-  //     autoAlpha: 0,
-  //     xPercent: -100,
-  //     duration: 0.5,
-  //     stagger: 0.1,
-  //     ease: "expo.out",
-  //   },
-  //   "<"
-  // );
+  tl.from(
+    links,
+    {
+      autoAlpha: 0,
+      stagger: 0.2,
+    },
+    "<"
+  );
+  tl.from(
+    copy,
+    {
+      autoAlpha: 0,
+    },
+    "<0.5"
+  );
 }

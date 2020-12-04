@@ -1,51 +1,27 @@
-// import "../navigation/index";
-// import { staggerReveal, overlayReveal, projectReveal } from "./homeAnimations";
+import "../navigation/index";
+import navbarAnimation from "../shared-animations/navbarAnimation";
+import {
+  heroAnimation,
+  sectionHeadingAnimation,
+  projectCardReveal,
+} from "./homeAnimations";
 
-// function hero() {
-//   const headingLines = Array.from(
-//     document.querySelectorAll("[data-hero-line]")
-//   );
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionHeaders = Array.from(
+    document.querySelectorAll("[data-section-header]")
+  );
+  const projectCards = Array.from(
+    document.querySelectorAll("[data-project-card]")
+  );
 
-//   const tl = staggerReveal(headingLines);
-//   tl.play();
-// }
+  sectionHeaders.forEach((header) => {
+    sectionHeadingAnimation(header);
+  });
 
-// function homeProjects() {
-//   const projects = Array.from(document.querySelectorAll("[data-project-item]"));
+  projectCards.forEach((card) => {
+    projectCardReveal(card);
+  });
 
-//   projects.forEach((project) => projectReveal(project));
-// }
-
-// function initialiseAnimations() {
-//   hero();
-//   homeProjects();
-
-//   // const sectionHeadings = Array.from(
-//   //   document.querySelectorAll("[data-section-heading]")
-//   // );
-//   // sectionHeadings.forEach((heading) => {
-//   //   const span = heading.querySelector("span");
-//   //   const tl = gsap.timeline({
-//   //     scrollTrigger: {
-//   //       trigger: heading,
-//   //     },
-//   //   });
-//   //   tl.from(heading, {
-//   //     xPercent: -100,
-//   //     duration: 0.6,
-//   //   });
-//   //   tl.from(
-//   //     span,
-//   //     {
-//   //       duration: 0.3,
-//   //       yPercent: 100,
-//   //       ease: "expo.out",
-//   //     },
-//   //     "+=0.3"
-//   //   );
-//   // });
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   initialiseAnimations();
-// });
+  navbarAnimation();
+  heroAnimation();
+});
