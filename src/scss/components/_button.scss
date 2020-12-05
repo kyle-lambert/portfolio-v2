@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+.button {
+  display: inline-block;
+  padding: 20px 26px;
+  color: $white;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 40px;
+  background-color: $blue;
+  transition: transform 150ms ease-out;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
