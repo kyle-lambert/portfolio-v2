@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
+@use '../base/typography';
 
-// Global resets
 *,
 *::before,
 *::after {
@@ -14,96 +14,36 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  background-color: $black;
-  color: $white;
-}
-
 ul {
   list-style: none;
 }
 
-// a {
-//   line-height: 1.5;
-//   letter-spacing: 2px;
-//   font-size: inherit;
-//   color: inherit;
-//   text-decoration: none;
-//   display: inline-block;
-// }
-
 button {
   outline: none;
   border: none;
-  color: inherit;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-// Typography
-h1,
-h2,
-h3 {
-  font-family: "LegalObligationSans";
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: inherit;
-}
-
-h1 {
-  font-size: 72px;
-
-  @media (min-width: $tablet) {
-    font-size: 96px;
-  }
-
-  @media (min-width: $laptop) {
-    font-size: 144px;
-  }
-}
-
-h2 {
-  font-size: 64px;
-
-  @media (min-width: $tablet) {
-    font-size: 72px;
-  }
-
-  @media (min-width: $laptop) {
-    font-size: 96px;
-  }
-}
-
-h3 {
-  font-size: 48px;
-
-  @media (min-width: $tablet) {
-    font-size: 64px;
-  }
-
-  @media (min-width: $laptop) {
-    font-size: 72px;
-  }
 }
 
 img {
   max-width: 100%;
 }
 
-// Layout
 .container {
-  width: 85%;
-  max-width: 1440px;
-  margin: 0 auto;
-}
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 
-.line-wrap {
-  overflow: hidden;
-
-  .line {
-    display: inline-block;
+  @media (min-width: $small) {
+    max-width: 540px;
+  }
+  @media (min-width: $medium) {
+    max-width: 720px;
+  }
+  @media (min-width: $large) {
+    max-width: 960px;
+  }
+  @media (min-width: $extra-large) {
+    max-width: 1140px;
   }
 }

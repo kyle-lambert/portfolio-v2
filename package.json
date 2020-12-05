@@ -4,7 +4,7 @@
   "description": "",
   "main": "./server/server.js",
   "scripts": {
-    "dev": "parcel ./src/pages/index.html ./src/pages/moviecloud.html",
+    "dev": "parcel ./src/pages/ghost.html",
     "build": "parcel build src/pages/index.html"
   },
   "author": "",
