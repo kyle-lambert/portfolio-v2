@@ -23,11 +23,9 @@
   &-info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
 
     @media (min-width: $small) {
       flex-direction: row;
-      // justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
     }
@@ -46,71 +44,78 @@
       margin-bottom: 10px;
     }
   }
+}
 
-  &-mockup {
-    &__img {
-      border-radius: 2px;
+.mockups {
+  background-color: $grey;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: flex-end;
+
+    @media (min-width: $large) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-.detail {
+.features {
   background-color: $dark;
   padding-top: 100px;
   padding-bottom: 100px;
 
-  &-content {
-    margin-bottom: 60px;
-
-    &__label {
-      display: block;
-      color: $white;
-      margin-bottom: 40px;
-    }
-
-    &__container {
-      display: grid;
-      column-gap: 30px;
-      row-gap: 30px;
-
-      @media (min-width: $large) {
-        column-gap: 40px;
-        row-gap: 40px;
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    &__item {
-      &-heading {
-        color: $white;
-        margin-bottom: 10px;
-
-        @media (min-width: $large) {
-          margin-bottom: 25px;
-        }
-      }
-      &-copy {
-        color: $white;
-      }
-    }
+  &__label {
+    display: block;
+    color: $white;
+    margin-bottom: 40px;
   }
 
-  &-mockup {
-    &__img {
-      border-radius: 2px;
-    }
+  &__img {
+    border-radius: 2px;
   }
 
-  &-next {
+  &__next {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    &__label {
+    &-label {
       display: block;
       color: $white;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.details {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 80px;
+
+  @media (min-width: $large) {
+    column-gap: 40px;
+    row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__box {
+    &-heading {
+      color: $white;
+      margin-bottom: 15px;
+
+      @media (min-width: $large) {
+        margin-bottom: 25px;
+      }
+    }
+    &-copy {
+      color: $white;
     }
   }
 }
