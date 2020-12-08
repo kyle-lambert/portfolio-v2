@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./scss/pages/home.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="./scripts/home/home.js" defer></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <a href="/index.html" class="header__nav-link">Home.</a>
+        <a href="#" class="header__nav-link">About.</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero container" data-gsap-hero>
+        <div class="hero-content">
+          <span class="hero-content__label label"
+            >Hi there, <br />
+            you found me!</span
+          >
+          <h1 class="hero-content__heading">
+            I'm Kyle, creative Web Developer based in Australia. I build awesome
+            things with the most indemand web technologies.
+          </h1>
+        </div>
+        <ul class="hero-cta">
+          <li class="hero-cta__item">
+            <a href="#featured" class="button">Explore my work</a>
+          </li>
+          <li class="hero-cta__item">
+            <a
+              href="https://github.com/kylelambert001"
+              target="__blank"
+              class="button--secondary"
+              >View Github</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="featured" id="featured">
+        <div class="featured__container container">
+          <div class="project">
+            <div class="project__info">
+              <h3 class="project__heading">Moviecloud</h3>
+              <span class="project__label label"
+                >React, SCSS, Framer Motion, TMDB API</span
+              >
+              <p class="project__copy copy">
+                A modern and user-friendly website to browse your favourite
+                movies, shows and actors.
+              </p>
+            </div>
+            <a href="/moviecloud.html" class="project__link">
+              <img
+                src="./assets/moviecloud/screenshot-banner.jpg"
+                alt=""
+                class="project__img"
+              />
+            </a>
+          </div>
+          <div class="project">
+            <div class="project__info">
+              <h3 class="project__heading">Ghost Lifestyle</h3>
+              <span class="project__label label"
+                >React, Styled Components, Strapi CMS, Framer Motion</span
+              >
+              <p class="project__copy copy">
+                An ecommerce website based off the popular gym supplement brand
+                Ghost Lifestyle Supplements.
+              </p>
+            </div>
+            <a href="/ghost.html" class="project__link">
+              <img
+                src="./assets/ghost/screenshot-banner.jpg"
+                alt=""
+                class="project__img"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <span class="footer__copy label"
+          >Copyright 2020, built by Kyle Lambert</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

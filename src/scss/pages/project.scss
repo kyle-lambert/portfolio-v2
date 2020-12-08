@@ -1,6 +1,8 @@
 @use "../base/global";
 @use "../abstracts/variables" as *;
 
+@use "../components/header";
+@use "../components/footer";
 @use "../components/button";
 
 .hero {
@@ -9,39 +11,37 @@
 
   &-content {
     max-width: 800px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 
-    &__label {
+    &__category {
       display: block;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
     &__heading {
       margin-bottom: 30px;
     }
+    &__tools {
+      display: block;
+      margin-bottom: 30px;
+      color: $pink;
+      opacity: 1;
+    }
   }
 
-  &-info {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: $small) {
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    &__item {
-      margin-bottom: 30px;
-      padding-right: 60px;
-
-      &:last-child {
-        padding-right: unset;
-      }
-    }
+  &-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    column-gap: 60px;
+    row-gap: 35px;
+    align-items: center;
 
     &__label {
       display: block;
       margin-bottom: 10px;
+    }
+
+    &__link {
+      width: 100%;
     }
   }
 }
@@ -50,6 +50,11 @@
   background-color: $grey;
   padding-top: 80px;
   padding-bottom: 80px;
+  overflow: hidden;
+
+  &__img {
+    display: block;
+  }
 
   &__container {
     display: grid;
@@ -68,12 +73,6 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
-  &__label {
-    display: block;
-    color: $white;
-    margin-bottom: 40px;
-  }
-
   &__img {
     border-radius: 2px;
   }
@@ -88,31 +87,27 @@
       display: block;
       color: $white;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 }
 
 .details {
   display: grid;
-  column-gap: 30px;
-  row-gap: 30px;
-  margin-bottom: 80px;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin-bottom: 90px;
 
   @media (min-width: $large) {
-    column-gap: 40px;
-    row-gap: 40px;
+    column-gap: 50px;
+    row-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   &__box {
     &-heading {
       color: $white;
-      margin-bottom: 15px;
-
-      @media (min-width: $large) {
-        margin-bottom: 25px;
-      }
+      margin-bottom: 20px;
     }
     &-copy {
       color: $white;
