@@ -3,18 +3,23 @@
 .header {
   &__nav {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 50px;
+    right: 50px;
     z-index: 999;
 
     &-link {
-      margin-right: 20px;
+      margin-right: 40px;
       color: $dark;
       font-weight: 700;
       opacity: 1;
       text-decoration: none;
       padding: 2px;
       text-transform: lowercase;
+      transition: color 150ms ease;
+
+      &:last-child {
+        margin-right: unset;
+      }
 
       &:hover {
         color: $pink;
