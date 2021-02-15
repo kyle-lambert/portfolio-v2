@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scss/pages/project.scss" />
+    <link rel="shortcut icon" href="./assets/avatar-icon.png" />
+    <link rel="stylesheet" href="./scss/pages/ghost.scss" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -15,123 +16,64 @@
     <title>Ghost Lifestyle</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
-        <a href="/index.html" class="header__nav-link">Home.</a>
-        <a href="#" class="header__nav-link">About.</a>
-      </nav>
-    </header>
+    <a href="/index.html" class="avatar">
+      <img src="./assets/avatar-icon.png" alt="" class="avatar__img" />
+    </a>
     <main>
-      <section class="hero container" data-gsap-hero>
-        <div class="hero-content">
-          <span class="hero-content__category label">Web development</span>
-          <h2 class="hero-content__heading">
-            An ecommerce website based off the popular gym supplement brand
-            Ghost Lifestyle Supplements.
+      <section class="project-hero container" data-gsap-hero>
+        <header>
+          <span class="project-hero__category-tag">Web development</span>
+          <h2 class="project-hero__name">
+            Ecommerce website based off the popular gym supplement brand Ghost Lifestyle
+            Supplements.
           </h2>
-          <span class="hero-content__tools label"
-            >React, Styled Components, Strapi CMS, Framer Motion</span
+          <span class="project-hero__techstack"
+            >React JS, Styled Components, Strapi CMS, Framer Motion</span
           >
-          <p class="hero-content__copy copy">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-            dolores, eaque in perferendis aliquam nesciunt itaque assumenda quia
-            velit modi rem! Iure ducimus recusandae magnam voluptatibus officiis
-            minus non minima.
+          <p class="project-hero__intro">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores, eaque in
+            perferendis aliquam nesciunt itaque assumenda quia velit modi rem! Iure ducimus
+            recusandae magnam voluptatibus officiis minus non minima.
           </p>
-        </div>
-        <ul class="hero-bar">
-          <li class="hero-bar__item name">
-            <span class="hero-bar__label label">Name</span>
-            <h4 class="hero-bar__heading">Ghost Lifestyle</h4>
+        </header>
+        <ul class="infobar">
+          <li>
+            <span class="infobar__label">Name</span>
+            <h5 class="infobar__name">Ghost Lifestyle</h5>
           </li>
-          <li class="hero-bar__item time">
-            <span class="hero-bar__label label">Time</span>
-            <h4 class="hero-bar__heading">August 2020</h4>
+          <li>
+            <span class="infobar__label">Time</span>
+            <h5 class="infobar__name">August 2020</h5>
           </li>
-          <li class="hero-bar__item website">
-            <a
-              href="https://musing-lichterman-efc7d0.netlify.app/"
-              target="__blank"
-              class="hero-bar__link button"
-              >Live website</a
-            >
+          <li>
+            <a href="#" target="__blank" class="infobar__link button">Live website</a>
           </li>
-          <li class="hero-bar__item github">
+          <li>
             <a
               href="https://github.com/kylelambert001/ghost-lifestyle-ecommerce"
               target="__blank"
-              class="hero-bar__link button--secondary"
+              class="infobar__link button--secondary"
               >Github repo</a
             >
           </li>
         </ul>
       </section>
-      <section class="mockups">
-        <div class="mockups__container container">
-          <img src="./assets/ghost/mockup-1.png" alt="" class="mockups__img" />
-          <img src="./assets/ghost/mockup-2.png" alt="" class="mockups__img" />
+      <section class="mockup">
+        <div class="mockup__container container">
+          <img src="./assets/ghost/ghost-mockup.png" alt="" class="mockup__img" />
         </div>
       </section>
-      <section class="features">
-        <div class="features__container container">
-          <div class="details">
-            <div class="details__box">
-              <h4 class="details__box-heading">Technologies</h4>
-              <p class="details__box-copy copy">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                repudiandae ratione voluptate placeat mollitia quas suscipit
-                dolor possimus magnam, itaque ea reprehenderit ad cupiditate
-                aliquam! Voluptatum recusandae similique aperiam sint.
-              </p>
-            </div>
-            <div class="details__box">
-              <h4 class="details__box-heading">Goals</h4>
-              <p class="details__box-copy copy">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                repudiandae ratione voluptate placeat mollitia quas suscipit
-                dolor possimus magnam, itaque ea reprehenderit ad cupiditate
-                aliquam! Voluptatum recusandae similique aperiam sint.
-              </p>
-            </div>
-            <div class="details__box">
-              <h4 class="details__box-heading">Challenges</h4>
-              <p class="details__box-copy copy">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                repudiandae ratione voluptate placeat mollitia quas suscipit
-                dolor possimus magnam, itaque ea reprehenderit ad cupiditate
-                aliquam! Voluptatum recusandae similique aperiam sint.
-              </p>
-            </div>
-            <div class="details__box">
-              <h4 class="details__box-heading">Learnings</h4>
-              <p class="details__box-copy copy">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-                repudiandae ratione voluptate placeat mollitia quas suscipit
-                dolor possimus magnam, itaque ea reprehenderit ad cupiditate
-                aliquam! Voluptatum recusandae similique aperiam sint.
-              </p>
-            </div>
-          </div>
-          <img src="./assets/ghost/mockup-3.png" alt="" class="features__img" />
-          <div class="features__next">
-            <span class="features__next-label label"
-              >Continue to next project</span
-            >
-            <a
-              href="/moviecloud.html"
-              class="features__next-link button--secondary"
-              >Moviecloud</a
-            >
-          </div>
+      <section class="next-project-banner">
+        <div class="next-project-banner__wrapper container">
+          <span class="next-project-banner__text">Continue to next project</span>
+          <a href="/moviecloud.html" class="next-project-banner__link button--secondary"
+            >MovieCloud</a
+          >
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__container container">
-        <span class="footer__copy label"
-          >Copyright 2020, built by Kyle Lambert</span
-        >
-      </div>
+      <span class="footer__copyright">Copyright 2021, built by Kyle Lambert</span>
     </footer>
   </body>
 </html>
