@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *;
+
+.project-hero {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__category-tag {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: $grey;
+    margin-bottom: 48px;
+  }
+
+  &__name {
+    margin-bottom: 32px;
+
+    @media (min-width: $medium) {
+      max-width: 90%;
+    }
+  }
+
+  &__techstack {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    color: $pink;
+  }
+
+  &__intro {
+    font-size: 18px;
+    color: $light-navy;
+    margin-bottom: 72px;
+
+    @media (min-width: $medium) {
+      max-width: 85%;
+    }
+  }
+}

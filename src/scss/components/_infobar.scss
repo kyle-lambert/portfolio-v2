@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.infobar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+
+  @media (min-width: $large) {
+    width: 85%;
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $grey;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  &__link {
+    width: 100%;
+  }
+}

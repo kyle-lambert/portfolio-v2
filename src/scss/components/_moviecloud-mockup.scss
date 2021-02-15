@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+
+.mockup {
+  background-color: $moviecloud-accent;
+  &__img {
+    display: block;
+    border-radius: 3px;
+  }
+}
