@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as *;
+
+.project-card {
+  margin-bottom: 64px;
+  break-inside: avoid;
+
+  &:last-child {
+    margin-bottom: unset;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 200ms ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      transition: opacity 200ms ease;
+      opacity: 0.4;
+    }
+
+    &:hover {
+      transform: scale(1.015);
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__info {
+    padding: 0 10px;
+  }
+
+  &__heading {
+    color: $light-grey;
+    margin-bottom: 16px;
+  }
+
+  &__techstack {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $yellow;
+    opacity: 1;
+  }
+
+  &__copy {
+    color: $light-grey;
+    margin-bottom: 32px;
+
+    @media (min-width: $medium) {
+      max-width: 90%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use '../../abstracts/variables' as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 92px;
+  padding-bottom: 92px;
+
+  &__content {
+    margin-bottom: 48px;
+  }
+
+  &__greeting {
+    display: block;
+    margin-bottom: 32px;
+    color: $grey;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  &__heading {
+    @media (min-width: $medium) {
+      max-width: 90%;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-item {
+      margin: 8px 0;
+      width: 100%;
+
+      @media (min-width: $small) {
+        width: initial;
+        margin: 8px 32px 8px 0;
+      }
+    }
+  }
+}

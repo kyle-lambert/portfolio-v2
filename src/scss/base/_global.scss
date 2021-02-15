@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 @use '../base/typography';
 
+@use "../layout/container";
+
 *,
 *::before,
 *::after {
@@ -25,42 +27,4 @@ button {
 
 img {
   max-width: 100%;
-}
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-
-  @media (min-width: $small) {
-    padding-left: unset;
-    padding-right: unset;
-    max-width: 540px;
-  }
-
-  @media (min-width: $medium) {
-    max-width: 720px;
-  }
-
-  @media (min-width: $large) {
-    max-width: 960px;
-  }
-
-  @media (min-width: $x-large) {
-    max-width: 1140px;
-  }
-
-  @media (min-width: $xx-large) {
-    max-width: 1320px;
-  }
-
-  &--fluid {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }

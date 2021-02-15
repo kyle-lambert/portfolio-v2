@@ -21,7 +21,7 @@
     </a>
     <main>
       <section class="hero container" data-gsap-hero>
-        <header class="hero__content-wrapper">
+        <header>
           <div class="hero__content">
             <span class="hero__greeting">You found me...</span>
             <h1 class="hero__heading">
@@ -44,34 +44,32 @@
       <section class="featured" id="featured">
         <div class="featured__container container">
           <div class="featured__projects">
-            <article class="project">
-              <div class="project__info">
-                <h3 class="project__heading">Moviecloud</h3>
-                <span class="project__techstack label"
-                  >React JS, SCSS, Framer Motion, TMDB API</span
-                >
-                <p class="project__copy">
+            <article class="project-card">
+              <div class="project-card__info">
+                <h3 class="project-card__heading">Moviecloud</h3>
+                <span class="project-card__techstack">React JS, SCSS, Framer Motion, TMDB API</span>
+                <p class="project-card__copy">
                   A modern and user-friendly website to browse your favourite movies, shows and
                   actors.
                 </p>
               </div>
-              <a href="/moviecloud.html" class="project__link">
-                <img src="./assets/moviecloud/movie-home.jpg" alt="" class="project__img" />
+              <a href="/moviecloud.html" class="project-card__link">
+                <img src="./assets/moviecloud/movie-home.jpg" alt="" class="project-card__img" />
               </a>
             </article>
-            <article class="project">
-              <div class="project__info">
-                <h3 class="project__heading">Ghost Lifestyle</h3>
-                <span class="project__techstack label"
+            <article class="project-card">
+              <div class="project-card__info">
+                <h3 class="project-card__heading">Ghost Lifestyle</h3>
+                <span class="project-card__techstack"
                   >React JS, Styled Components, Strapi CMS, Framer Motion</span
                 >
-                <p class="project__copy">
+                <p class="project-card__copy">
                   An ecommerce website based off the popular gym supplement brand Ghost Lifestyle
                   Supplements.
                 </p>
               </div>
-              <a href="/ghost.html" class="project__link">
-                <img src="./assets/ghost/ghost-home.png" alt="" class="project__img" />
+              <a href="/ghost.html" class="project-card__link">
+                <img src="./assets/ghost/ghost-home.png" alt="" class="project-card__img" />
               </a>
             </article>
           </div>

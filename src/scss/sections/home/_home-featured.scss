@@ -1,0 +1,17 @@
+@use "../../abstracts/variables" as *;
+
+@use '../../components/project-card';
+
+.featured {
+  background-color: $navy;
+
+  &__container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__projects {
+    columns: 500px;
+    gap: 32px;
+  }
+}
