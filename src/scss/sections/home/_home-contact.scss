@@ -1,0 +1,46 @@
+@use '../../abstracts/variables' as *;
+
+.contact {
+  background-color: $light-grey;
+
+  &__container {
+    padding-top: 92px;
+    padding-bottom: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+  }
+
+  &__item {
+    margin: 0 16px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 5px;
+    &--email {
+      color: $pink;
+    }
+
+    &--linkedin {
+      color: $blue;
+    }
+  }
+}
