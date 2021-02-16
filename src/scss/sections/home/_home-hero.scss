@@ -3,9 +3,14 @@
 .hero {
   display: flex;
   align-items: center;
-  min-height: 90vh;
-  padding-top: 92px;
-  padding-bottom: 92px;
+  min-height: 100vh;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
+  @media (min-width: $medium) {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
 
   &__content {
     margin-bottom: 48px;

@@ -6,8 +6,13 @@
   background-color: $navy;
 
   &__container {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 52px;
+    padding-bottom: 52px;
+
+    @media (min-width: $medium) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
   }
 
   &__projects {

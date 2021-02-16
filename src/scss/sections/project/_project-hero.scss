@@ -3,12 +3,18 @@
 @use '../../components/infobar';
 
 .hero {
-  padding-top: 92px;
-  padding-bottom: 92px;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding-top: 52px;
+  padding-bottom: 52px;
+
+  @media (min-width: $medium) {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
 
   &__category-tag {
     display: block;

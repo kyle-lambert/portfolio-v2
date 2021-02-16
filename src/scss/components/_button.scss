@@ -2,8 +2,8 @@
 
 .button {
   display: inline-block;
-  padding: 20px 26px;
-  color: $white;
+  padding: 16px 20px;
+  color: $navy;
   font-weight: 700;
   font-size: 13px;
   text-decoration: none;
@@ -11,13 +11,38 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   border-radius: 48px;
+  border: 2px solid $navy;
+  background-color: $white;
+  width: 100%;
+  transition: all 200ms ease;
+  box-shadow: 1px 1px 10px rgba(22, 28, 45, 0.1);
+
+  @media (min-width: $small) {
+    width: unset;
+  }
+
+  @media (min-width: $medium) {
+    padding: 18px 22px;
+  }
+
+  @media (min-width: $large) {
+    padding: 20px 24px;
+  }
+
+  &:hover {
+    transform: scale(1.025);
+    background-color: $navy;
+    box-shadow: 1px 1px 10px rgba(22, 28, 45, 0.1);
+    color: $white;
+  }
+}
+
+.button--primary {
+  color: $white;
   background-image: linear-gradient(90deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
   background-size: 200% 200%;
-  border: 2px solid transparent;
-  transition: background-position 300ms ease, transform 200ms ease;
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
   background-position: 1%;
-  width: 100%;
 
   @media (min-width: $small) {
     width: unset;
@@ -25,33 +50,16 @@
 
   &:hover {
     background-position: 99%;
-    transform: scale(1.025);
   }
 }
 
 .button--secondary {
-  display: inline-block;
-  padding: 20px 26px;
   color: $pink;
-  font-weight: 700;
-  font-size: 13px;
-  text-decoration: none;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-radius: 50px;
-  border: 2px solid $pink;
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  transition: transform 200ms ease, color 300ms ease, background-color 300ms ease;
-
-  @media (min-width: $small) {
-    width: unset;
-  }
+  border-color: $pink;
+  background-color: transparent;
 
   &:hover {
     background-color: $pink;
     color: $white;
-    transform: scale(1.025);
   }
 }
