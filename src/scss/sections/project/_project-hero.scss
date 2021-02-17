@@ -3,11 +3,11 @@
 @use '../../components/infobar';
 
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  visibility: hidden;
   padding-top: 52px;
   padding-bottom: 52px;
 

@@ -6,6 +6,7 @@
   min-height: 100vh;
   padding-top: 52px;
   padding-bottom: 52px;
+  visibility: hidden;
 
   @media (min-width: $medium) {
     padding-top: 92px;
