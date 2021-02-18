@@ -3,7 +3,7 @@
 @use '../../components/infobar';
 
 .hero {
-  min-height: 90vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@
       max-width: 90%;
     }
     @media (min-width: $large) {
-      max-width: 85%;
+      max-width: 80%;
     }
   }
 
@@ -49,10 +49,11 @@
 
   &__intro {
     color: $light-navy;
-    margin-bottom: 72px;
+    margin-bottom: 48px;
 
     @media (min-width: $medium) {
       max-width: 90%;
+      margin-bottom: 72px;
     }
     @media (min-width: $large) {
       max-width: 80%;
