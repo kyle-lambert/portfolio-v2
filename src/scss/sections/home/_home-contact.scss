@@ -22,11 +22,11 @@
     color: $light-grey;
 
     @media (min-width: $medium) {
-      max-width: 70%;
+      max-width: 60%;
     }
 
     @media (min-width: $large) {
-      max-width: 55%;
+      max-width: 50%;
     }
   }
 
